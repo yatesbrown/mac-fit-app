@@ -2,7 +2,7 @@
 <%@ex_routine.each do |t|%>
   <div class="video-container" id="d<%=incrementor%>" style="display: none;">
     <h4><%= incrementor%></h4><h4><%= t.name%></h4>
-    <video id="v<%=incrementor%>" data-src="<%=t.video%>" height="300px" width="300px" controls webkit-playsinline></video>
+    <video id="v<%=incrementor%>" data-src="<%=t.video%>" height="300px" width="300px" autoplay controls webkit-playsinline></video>
   </div>
   <%incrementor += 1%>
 <%end%>
