@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160801235444) do
+ActiveRecord::Schema.define(version: 20160804224035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,6 +63,14 @@ ActiveRecord::Schema.define(version: 20160801235444) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "routine_trackers", force: :cascade do |t|
+    t.string   "routine_type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_routine_trackers_on_user_id", using: :btree
+  end
+
   create_table "routines", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -70,8 +78,6 @@ ActiveRecord::Schema.define(version: 20160801235444) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
     t.string   "email"
     t.string   "phone_number"
     t.integer  "weight"
@@ -79,6 +85,9 @@ ActiveRecord::Schema.define(version: 20160801235444) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
   end
 
 end

@@ -40,9 +40,11 @@ e25 = Exercise.create(name: 'Alternating V-Up Abs', difficulty:1, video: 'https:
 e26 = Exercise.create(name: 'V-Up Abs', difficulty:1, video: 'https://s3.amazonaws.com/exercisevideos1/abs_v_up_dumbell.m4v', reps: 15)
 e27 = Exercise.create(name: 'Abs With Military Press', difficulty:1, video: 'https://s3.amazonaws.com/exercisevideos1/abs_shoulders_military_press.m4v', reps: 15)
 e28 = Exercise.create(name: 'Arm Row Lunge Position', difficulty:1, video: 'https://s3.amazonaws.com/exercisevideos1/One_arm_Row_lunge_position.m4v', reps: 30)
+
 Equipment.create(name: "dumbells")
 Equipment.create(name: "medicine-ball")
 Equipment.create(name: "none")
+Equipment.create(name: "")
 
 e1.add_muscle_groups("warmup")
 e1.add_equipments("none")

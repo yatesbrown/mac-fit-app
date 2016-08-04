@@ -1,13 +1,17 @@
 class PageController < ApplicationController
 
-  def workoutpage
-    @ex_routine = Routine.find(1).exercises
-    @videos = []
-    @ex_routine.each do |v|
-      @videos << v.video
-    end
+
+
+  def homepage
+
   end
 
+  
 
+
+private
+  def user_params
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
+  end
 
 end
