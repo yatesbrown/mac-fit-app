@@ -1,9 +1,11 @@
 <%incrementor = 1%>
 <%@ex_routine.each do |t|%>
-  <div class="video-container" id="v<%=incrementor%>" style="display: none;">
-    <h4><%= t.name%></h4>
-    <video src="<%=t.video%>" height="300px" width="300px" controls></video>
+  <div class="video-container" id="d<%=incrementor%>" style="display: none;">
+    <h4><%= incrementor%></h4><h4><%= t.name%></h4>
+    <video id="v<%=incrementor%>" data-src="<%=t.video%>" height="300px" width="300px" controls></video>
   </div>
   <%incrementor += 1%>
 <%end%>
-<button id="the_button" type="button" name="button">button</button>
+<button type="button" name="button" id="start-button">Get Started!</button>
+<button id="the-back-button" type="button" name="button">Back Button</button>
+<button id="the-next-button" type="button" name="button">Next Button</button>
