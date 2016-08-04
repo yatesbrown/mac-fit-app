@@ -157,7 +157,7 @@ r2.add_exercises(legs_and_arms)
 chest_and_shoulders = []
 all_exercises.each do |j|
 
-  chest_and_shoulders << unless j.muscle_groups.include?(MuscleGroup.find_by_name("legs")) || j.muscle_groups.include?(MuscleGroup.find_by_name("arms")) || j.muscle_groups.include?(MuscleGroup.find_by_name("back"))
+  chest_and_shoulders << j unless j.muscle_groups.include?(MuscleGroup.find_by_name("legs")) || j.muscle_groups.include?(MuscleGroup.find_by_name("arms")) || j.muscle_groups.include?(MuscleGroup.find_by_name("back"))
 
 end
 r3.add_exercises(chest_and_shoulders)
@@ -165,7 +165,7 @@ r3.add_exercises(chest_and_shoulders)
 chest_and_arms = []
 all_exercises.each do |j|
 
-  chest_and_arms << unless j.muscle_groups.include?(MuscleGroup.find_by_name("legs")) || j.muscle_groups.include?(MuscleGroup.find_by_name("shoulders")) || j.muscle_groups.include?(MuscleGroup.find_by_name("back"))
+  chest_and_arms << j unless j.muscle_groups.include?(MuscleGroup.find_by_name("legs")) || j.muscle_groups.include?(MuscleGroup.find_by_name("shoulders")) || j.muscle_groups.include?(MuscleGroup.find_by_name("back"))
 
 end
 r4.add_exercises(chest_and_arms)
@@ -173,7 +173,7 @@ r4.add_exercises(chest_and_arms)
 back_and_shoulders = []
 all_exercises.each do |j|
 
-  back_and_shoulders << unless j.muscle_groups.include?(MuscleGroup.find_by_name("legs")) || j.muscle_groups.include?(MuscleGroup.find_by_name("arms")) || j.muscle_groups.include?(MuscleGroup.find_by_name("chest"))
+  back_and_shoulders << j unless j.muscle_groups.include?(MuscleGroup.find_by_name("legs")) || j.muscle_groups.include?(MuscleGroup.find_by_name("arms")) || j.muscle_groups.include?(MuscleGroup.find_by_name("chest"))
 
 end
 r5.add_exercises(back_and_shoulders)
@@ -181,6 +181,6 @@ r5.add_exercises(back_and_shoulders)
 back_and_arms = []
 all_exercises.each do |j|
 
-  back_and_arms << unless j.muscle_groups.include?(MuscleGroup.find_by_name("legs")) || j.muscle_groups.include?(MuscleGroup.find_by_name("shoulders")) || j.muscle_groups.include?(MuscleGroup.find_by_name("chest"))
+  back_and_arms << j unless j.muscle_groups.include?(MuscleGroup.find_by_name("legs")) || j.muscle_groups.include?(MuscleGroup.find_by_name("shoulders")) || j.muscle_groups.include?(MuscleGroup.find_by_name("chest"))
 
 end

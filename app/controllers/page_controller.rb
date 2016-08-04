@@ -1,7 +1,9 @@
 class PageController < ApplicationController
   def homepage
-    @warmups = MuscleGroup.find(6).exercises
-    @two_warmups = @warmups.sample(2)
-    
+    @ex_routine = Routine.find(1).exercises
+    @videos = []
+    @ex_routine.each do |v|
+      @videos << v.video
+    end
   end
 end

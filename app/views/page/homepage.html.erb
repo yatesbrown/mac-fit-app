@@ -1,4 +1,9 @@
-
-<% @two_warmups.each do |g|%>
-<video src="<%=g.video%>" controls width="320" height="240"></video>
+<%incrementor = 1%>
+<%@ex_routine.each do |t|%>
+  <div class="video-container" id="v<%=incrementor%>" style="display: none;">
+    <h4><%= t.name%></h4>
+    <video src="<%=t.video%>" height="300px" width="300px" controls></video>
+  </div>
+  <%incrementor += 1%>
 <%end%>
+<button id="the_button" type="button" name="button">button</button>

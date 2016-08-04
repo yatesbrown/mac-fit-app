@@ -7,6 +7,7 @@ gem 'rails', '~> 5.0.0'
 gem 'pg'
 gem 'hirb'
 gem 'rails_12factor', group: :production
+gem 'jquery-turbolinks'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
